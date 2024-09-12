@@ -1,0 +1,181 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SUB-{YYYY}-{#####}",
+ "creation": "2024-07-22 13:53:45.117219",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "add_subscription_section",
+  "customer",
+  "site_name",
+  "start_date",
+  "total_days",
+  "send_reminder",
+  "send_email_to_admin",
+  "auto_renew",
+  "column_break_tbwy",
+  "days_number",
+  "item",
+  "end_date",
+  "remind_before_days",
+  "email_tab",
+  "section_break_ceyz",
+  "email_template"
+ ],
+ "fields": [
+  {
+   "fieldname": "add_subscription_section",
+   "fieldtype": "Section Break",
+   "label": "Add Subscription"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Site Management",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remind_before_days",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Remind Before Days"
+  },
+  {
+   "default": "0",
+   "fieldname": "send_reminder",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Send Reminder Email to Customer"
+  },
+  {
+   "default": "0",
+   "fieldname": "send_email_to_admin",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Send Email to Admin"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_renew",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Auto Renew"
+  },
+  {
+   "fieldname": "column_break_tbwy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_tab",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Email"
+  },
+  {
+   "default": "Bot Subscription Email",
+   "fieldname": "email_template",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Email Template",
+   "options": "Email Template"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "total_days",
+   "fieldtype": "Int",
+   "label": "Days Left",
+   "read_only": 1
+  },
+  {
+   "fieldname": "days_number",
+   "fieldtype": "Int",
+   "label": "Days number"
+  },
+  {
+   "fieldname": "section_break_ceyz",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fetch_from": "customer.site_name",
+   "fieldname": "site_name",
+   "fieldtype": "Data",
+   "label": "Site",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-10 17:06:29.085191",
+ "modified_by": "Administrator",
+ "module": "Subscription App",
+ "name": "Bot Subscription",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
